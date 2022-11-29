@@ -10,9 +10,7 @@
 <!--  cart from dataservice -->
   <ion-list>
     <div *ngFor="let product of cart">
-      <app-product-card [productName]="product.productName"
-                        [productPrice]="product.productPrice"
-                        [productImage]="product.productImage">
+      <app-product-card [product]="product">
       </app-product-card>
     </div>
   </ion-list>
@@ -20,7 +18,7 @@
     <span class="font-poppins font-bold text-xl">Total Amount: {{getTotal()}}</span>
     <ion-button class="ion-margin font-poppins text-primary" expand="block" fill="outline" color="primary">
       <ion-icon slot="start" name="card-outline"></ion-icon>
-      Checkout
+      <ion-label class="font-bold font-poppins">Checkout</ion-label>
     </ion-button>
   </div>
 </ion-content>

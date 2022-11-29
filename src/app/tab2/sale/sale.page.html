@@ -8,5 +8,18 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <div *ngFor="let product of products">
+      <ion-item>
+        <ion-label>
+          <h2 class="font-poppins">{{product.productName}}</h2>
+          <p class="font-poppins">{{product.productPrice - (product.productPrice * 0.2) | currency: 'PHP': 'symbol'}}</p>
+        </ion-label>
+        <ion-button fill="outline" routerLink="/product/{{product.id}}">
+          <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+          <ion-label class="font-poppins font-bold">View</ion-label>
+        </ion-button>
+      </ion-item>
+    </div>
+  </ion-list>
 </ion-content>

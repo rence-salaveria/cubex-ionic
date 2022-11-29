@@ -8,6 +8,7 @@ export class DataService {
 
   products: any[] = [
     {
+      id: 1,
       productImage: 'hoodie.jpg',
       productName: 'Maison Ghost Hoodie v1',
       productPrice: 750,
@@ -16,6 +17,7 @@ export class DataService {
       isOnSale: true
     },
     {
+      id: 2,
       productImage: 'hoodie2.jpg',
       productName: 'Maison Ghost Hoodie v2',
       productPrice: 700,
@@ -24,6 +26,7 @@ export class DataService {
       isOnSale: true
     },
     {
+      id: 3,
       productImage: 'jersey.jpg',
       productName: 'JLF Basketball Jersey',
       productPrice: 300,
@@ -32,6 +35,7 @@ export class DataService {
       isOnSale: false
     },
     {
+      id: 4,
       productImage: 'labyrinth.png',
       productName: 'Labyrinth High Quality Tshirt',
       productPrice: 630.50,
@@ -40,6 +44,7 @@ export class DataService {
       isOnSale: false
     },
     {
+      id: 5,
       productImage: 'mg.jpg',
       productName: 'MG Shirts',
       productPrice: 420,
@@ -48,6 +53,7 @@ export class DataService {
       isOnSale: true
     },
     {
+      id: 6,
       productImage: 'caramel.gif',
       productName: 'Scented Candle Design',
       productPrice: 500,
@@ -56,6 +62,7 @@ export class DataService {
       isOnSale: false
     },
     {
+      id: 7,
       productImage: 'drip.jpg',
       productName: 'Drip Logo Design',
       productPrice: 1500,
@@ -64,6 +71,10 @@ export class DataService {
       isOnSale: true
     },
   ];
+
+  getProductById(id: number) {
+    return this.products.find(product => product.id === id)
+  }
 
   // push all isCarted to cart
   cart: any[] = this.products.filter(product => product.isCarted);

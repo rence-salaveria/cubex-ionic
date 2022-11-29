@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title class="font-poppins ion-text-center font-bold">
-      Product List
+      All Products
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -28,10 +28,7 @@
   </div>
   <ion-list>
     <div *ngFor="let product of products">
-      <app-product-card [productName]="product.productName"
-                        [productPrice]="product.productPrice"
-                        [productImage]="product.productImage">
-      </app-product-card>
+      <app-product-card [product]="product"></app-product-card>
     </div>
   </ion-list>
 </ion-content>

@@ -14,17 +14,29 @@
       <img src="/assets/banners/{{s.image}}" [width]="150">
     </ion-slide>
   </ion-slides>
-  <h5 class="font-poppins text-center font-bold mt-1 text-2xl text-primary">Featured Designs</h5>
+  <h5 class="font-poppins text-center font-bold mt-1 text-2xl text-primary">Featured Designs and Products</h5>
   <ion-grid>
     <ion-row>
       <ion-col size="6" size-md="4" size-lg="3" size-xl="2" *ngFor="let p of products">
         <ion-card>
-          <ion-card-header>
-            <ion-card-title class="font-poppins font-bold text-primary text-center text-xl">{{p.productName}}</ion-card-title>
-            <ion-card-subtitle class="font-poppins text-center">Php{{p.productPrice}}</ion-card-subtitle>
+          <ion-card-header routerLink="/product/{{p.id}}">
+            <ion-card-title class="font-poppins font-bold text-primary text-center text-xl">
+              {{p.productName}}
+            </ion-card-title>
+            <div *ngIf="p.isOnSale">
+              <ion-card-subtitle class="font-poppins text-center flex items-center justify-center">
+                <span>{{ p.productPrice - (p.productPrice*0.2) | currency: "PHP": "symbol" }}</span>
+                <ion-badge color="danger" class="text-sm ml-1">Sale</ion-badge>
+              </ion-card-subtitle>
+            </div>
+            <div *ngIf="!p.isOnSale">
+              <ion-card-subtitle class="font-poppins text-center">
+                {{ p.productPrice | currency: "PHP": "symbol" }}
+              </ion-card-subtitle>
+            </div>
           </ion-card-header>
           <ion-card-content>
-            <ion-img src="/assets/photos/{{p.productImage}}" class="w-full"></ion-img>
+            <ion-img src="/assets/photos/{{p.productImage}}" class="w-full" routerLink="/product/{{p.id}}"></ion-img>
             <ion-button expand="block" fill="outline"
                         (click)="addProductToCart(p)"
                         color="warning"

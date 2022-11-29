@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../data.service";
 
 @Component({
   selector: 'app-sale',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sale.page.scss'],
 })
 export class SalePage implements OnInit {
+dataService: DataService = new DataService()
+  products: any[] = this.dataService.onSale
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  test() {
+    console.log('lol')
+  }
 }

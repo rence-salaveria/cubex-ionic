@@ -1,11 +1,27 @@
-<div class="mx-3 my-3 rounded-md border-2 border-white h-32 bg-black shadow-sm shadow-primary">
+<div class="mx-3 my-3 rounded-md border-2 border-white h-32 bg-black shadow-sm shadow-primary"
+     routerLink="/product/{{product.id}}">
   <div class="flex justify-between items-center mx-3 h-full">
     <div class="inline-flex flex-col font-poppins">
-        <span class="font-bold text-xl text-primary">{{productName}}</span>
-      <span>Php{{productPrice!.toFixed(2)}}</span>
+      <span class="font-bold text-xl text-primary">
+        {{product.productName}}
+      </span>
+      <div *ngIf="product.isOnSale" class="flex flex-row items-center">
+        <h3 class="font-poppins text-lg text-primary">
+          {{ product.productPrice - (product.productPrice*0.2) | currency: 'PHP': 'symbol' }}
+        </h3>
+        <h3 class="font-poppins text-gray-600 line-through ml-2">
+          {{ product.productPrice | currency: 'PHP': 'symbol' }}
+        </h3>
+      </div>
+      <div *ngIf="!product.isOnSale" class="flex flex-row items-center">
+        <h3 class="font-poppins">
+          {{ product.productPrice | currency: 'PHP': 'symbol' }}
+        </h3>
+      </div>
+
     </div>
     <div class="w-[120px]">
-      <ion-img src="assets/photos/{{productImage}}" style="border-radius: 20px"></ion-img>
+      <ion-img src="assets/photos/{{product.productImage}}" style="border-radius: 20px"></ion-img>
     </div>
   </div>
 </div>

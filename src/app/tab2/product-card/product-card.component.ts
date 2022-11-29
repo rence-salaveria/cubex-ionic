@@ -11,8 +11,6 @@ export class ProductCardComponent implements OnInit {
 
   ngOnInit() {}
 
-  @Input() productName?: string;
-  @Input() productPrice?: number;
-  @Input() productImage?: string;
+  @Input() product?: any;
 
 }
