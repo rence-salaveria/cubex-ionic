@@ -27,5 +27,9 @@
         {{ product.productPrice | currency: 'PHP': 'symbol' }}
       </h3>
     </div>
+    <ion-img class="w-[20rem] h-[20rem] mt-2" src="/assets/photos/{{product.productImage}}"></ion-img>
+    <p class="font-poppins mx-[10%] text-justify mt-2">
+      {{ product.productDescription }}
+    </p>
   </div>
 </ion-content>

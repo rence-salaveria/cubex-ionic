@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from "../../data.service";
 
 @Component({
@@ -7,10 +7,11 @@ import {DataService} from "../../data.service";
   styleUrls: ['./sale.page.scss'],
 })
 export class SalePage implements OnInit {
-dataService: DataService = new DataService()
+  dataService: DataService = new DataService()
   products: any[] = this.dataService.onSale
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

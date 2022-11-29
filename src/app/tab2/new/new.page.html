@@ -8,5 +8,35 @@
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <div *ngFor="let product of products">
+      <ion-item>
+        <ion-label>
+          <h2 class="font-poppins flex items-center">
+            <span>{{product.productName}}</span>
+            <ion-badge *ngIf="product.isOnSale" class="text-sm font-poppins ml-3" color="warning">On Sale</ion-badge>
+          </h2>
 
+          <div *ngIf="product.isOnSale" class="flex flex-row items-center">
+            <h3 class="font-poppins text-lg text-primary">
+              {{ product.productPrice - (product.productPrice*0.2) | currency: 'PHP': 'symbol' }}
+            </h3>
+            <h3 class="font-poppins text-gray-600 line-through ml-2">
+              {{ product.productPrice | currency: 'PHP': 'symbol' }}
+            </h3>
+          </div>
+          <div *ngIf="!product.isOnSale" class="flex flex-row items-center">
+            <h3 class="font-poppins">
+              {{ product.productPrice | currency: 'PHP': 'symbol' }}
+            </h3>
+          </div>
+        </ion-label>
+        <ion-button fill="outline" routerLink="/product/{{product.id}}">
+          <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+          <ion-label class="font-poppins font-bold">View</ion-label>
+        </ion-button>
+      </ion-item>
+    </div>
+  </ion-list>
 </ion-content>
+
