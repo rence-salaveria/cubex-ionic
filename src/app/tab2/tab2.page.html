@@ -10,11 +10,22 @@
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">
-        <span class="font-poppins">Product List</span>
+        <span class="font-poppins">All Products</span>
       </ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <div class="bg-[#1e1e1e] pt-5">
+    <div class="flex justify-between mx-[10%]">
+      <ion-button fill="outline" [routerLink]="['/tabs/tabs2/sale']">
+        <ion-icon slot="start" name="ticket-outline"></ion-icon>
+        <ion-label class="font-poppins">On Sale</ion-label>
+      </ion-button>
+      <ion-button fill="outline" [routerLink]="['/tabs/tabs2/new']">
+        <ion-icon slot="start" name="time-outline"></ion-icon>
+        <ion-label class="font-poppins">New Products</ion-label>
+      </ion-button>
+    </div>
+  </div>
   <ion-list>
     <div *ngFor="let product of products">
       <app-product-card [productName]="product.productName"
