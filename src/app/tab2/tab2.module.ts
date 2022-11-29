@@ -16,6 +16,9 @@ import {ProductCardComponent} from "./product-card/product-card.component";
     ExploreContainerComponentModule,
     Tab2PageRoutingModule
   ],
+  exports: [
+    ProductCardComponent
+  ],
   declarations: [Tab2Page, ProductCardComponent]
 })
 export class Tab2PageModule {}
