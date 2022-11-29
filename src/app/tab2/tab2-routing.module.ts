@@ -6,10 +6,15 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
-  },  {
+  },
+  {
     path: 'sale',
     loadChildren: () => import('./sale/sale.module').then( m => m.SalePageModule)
-  }
+  },  {
+    path: 'new',
+    loadChildren: () => import('./new/new.module').then( m => m.NewPageModule)
+  },
+
 
 ];
 
