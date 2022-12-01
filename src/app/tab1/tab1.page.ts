@@ -31,23 +31,23 @@ export class Tab1Page {
         slidesItems: [
           {
             id: 995,
-            image: "banner1.jpg"
+            image: "emoji-fever.jpg"
           },
           {
             id: 925,
-            image: "banner2.jpg"
+            image: "htsrc.jpg"
           },
           {
             id: 940,
-            image: "hero.jpg"
+            image: "money-drop.jpg"
           },
           {
             id: 943,
-            image: "labyrinth.png"
+            image: "peace.png"
           },
           {
             id: 944,
-            image: "mg.jpg"
+            image: "embossed.jpg"
           }
         ]
       };

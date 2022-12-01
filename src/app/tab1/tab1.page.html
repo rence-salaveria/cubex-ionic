@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title class="ion-text-center">
-      <span class="font-poppins font-bold">Cubex Clothing and Design Store</span>
+      <span class="font-poppins font-bold">Hot Source Clothing Store</span>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,7 +11,7 @@
               class="mx-2 my-2"
               (ionSlideDidChange)="SlideDidChange(sliderOne,slideWithNav)">
     <ion-slide *ngFor="let s of sliderOne.slidesItems" class="w-[100px]">
-      <img src="/assets/banners/{{s.image}}" [width]="150">
+      <img src="/assets/photos/{{s.image}}" [width]="150">
     </ion-slide>
   </ion-slides>
   <h5 class="font-poppins text-center font-bold mt-1 text-2xl text-primary">Featured Designs and Products</h5>

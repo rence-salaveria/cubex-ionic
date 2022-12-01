@@ -44,7 +44,7 @@ export class DataService {
       productPrice: 600.00,
       isCarted: false,
       isFeatured: false,
-      isOnSale: false,
+      isOnSale: true,
       productDescription: "Lorem ipsum dolor sit amet. Ut eaque iste ut galisum placeat est accusamus sequi. 33 internos culpa quo porro dolorum hic ipsa amet ab impedit voluptatibus nam fugit rerum ab repellat fugiat. Vel voluptatem provident sit dolor cumque qui molestias molestias non sunt beatae sit modi veniam qui asperiores officiis et voluptatem officiis. Eum eligendi cumque et iusto praesentium ab labore rerum cum dolorem veniam est deserunt illum et delectus repudiandae. "
     },
     {
