@@ -9,9 +9,9 @@ export class DataService {
   products: any[] = [
     {
       id: 1,
-      productImage: 'hoodie.jpg',
-      productName: 'Maison Ghost Hoodie v1',
-      productPrice: 750,
+      productImage: 'embossed.jpg',
+      productName: 'Embossed by HTSRC',
+      productPrice: 650,
       isCarted: true,
       isFeatured: true,
       isOnSale: true,
@@ -19,8 +19,8 @@ export class DataService {
     },
     {
       id: 2,
-      productImage: 'hoodie2.jpg',
-      productName: 'Maison Ghost Hoodie v2',
+      productImage: 'emoji-fever.jpg',
+      productName: 'Pastel Emoji TShirt',
       productPrice: 700,
       isCarted: false,
       isFeatured: true,
@@ -29,8 +29,8 @@ export class DataService {
     },
     {
       id: 3,
-      productImage: 'jersey.jpg',
-      productName: 'JLF Basketball Jersey',
+      productImage: 'emoji-fever-blk.jpg',
+      productName: 'Pastel Emoji TShirt Black',
       productPrice: 300,
       isCarted: true,
       isFeatured: false,
@@ -39,9 +39,9 @@ export class DataService {
     },
     {
       id: 4,
-      productImage: 'labyrinth.png',
-      productName: 'Labyrinth High Quality Tshirt',
-      productPrice: 630.50,
+      productImage: 'htsrc.jpg',
+      productName: 'HTSRC Designer TShirt',
+      productPrice: 600.00,
       isCarted: false,
       isFeatured: false,
       isOnSale: false,
@@ -49,8 +49,8 @@ export class DataService {
     },
     {
       id: 5,
-      productImage: 'mg.jpg',
-      productName: 'MG Shirts',
+      productImage: 'money-drop.jpg',
+      productName: 'Money Drop TShirt',
       productPrice: 420,
       isCarted: true,
       isFeatured: false,
@@ -59,22 +59,12 @@ export class DataService {
     },
     {
       id: 6,
-      productImage: 'caramel.gif',
-      productName: 'Scented Candle Design',
+      productImage: 'peace.jpg',
+      productName: 'Peace Designer TShirt',
       productPrice: 500,
       isCarted: false,
       isFeatured: true,
       isOnSale: false,
-      productDescription: "Lorem ipsum dolor sit amet. Ut eaque iste ut galisum placeat est accusamus sequi. 33 internos culpa quo porro dolorum hic ipsa amet ab impedit voluptatibus nam fugit rerum ab repellat fugiat. Vel voluptatem provident sit dolor cumque qui molestias molestias non sunt beatae sit modi veniam qui asperiores officiis et voluptatem officiis. Eum eligendi cumque et iusto praesentium ab labore rerum cum dolorem veniam est deserunt illum et delectus repudiandae. "
-    },
-    {
-      id: 7,
-      productImage: 'drip.jpg',
-      productName: 'Drip Logo Design',
-      productPrice: 1500,
-      isCarted: true,
-      isFeatured: true,
-      isOnSale: true,
       productDescription: "Lorem ipsum dolor sit amet. Ut eaque iste ut galisum placeat est accusamus sequi. 33 internos culpa quo porro dolorum hic ipsa amet ab impedit voluptatibus nam fugit rerum ab repellat fugiat. Vel voluptatem provident sit dolor cumque qui molestias molestias non sunt beatae sit modi veniam qui asperiores officiis et voluptatem officiis. Eum eligendi cumque et iusto praesentium ab labore rerum cum dolorem veniam est deserunt illum et delectus repudiandae. "
     },
   ];
